@@ -1,4 +1,7 @@
 *
+!.python-version
+!poetry.lock
+!pyproject.toml
 !*.py
 !*.md
 !*.txt

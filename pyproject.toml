@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "deep-face-live"
+version = "0.1.0"
+description = "A brief description of your project"
+package-mode = false
+authors = ["Your Name <your.email@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9, <3.10" # 请根据你的实际 Python 版本进行调整
+# onnxruntime-gpu = "^1.18.0"
+numpy = "1.21.6"
+h5py = "3.0.0"                     # h5py 没有指定具体版本，使用兼容的最新版本
+numexpr = "^2.0.0"                 # numexpr 没有指定具体版本，使用兼容的最新版本
+protobuf = "3.20.2"
+opencv-python = "4.8.0.74"
+opencv-contrib-python = "4.8.0.74"
+pyqt6 = "6.5.1"
+onnx = "^1.16.0"
+torch = "1.13.1"
+torchvision = "0.14.1"
+onnxruntime-gpu = {version = "^1.17.1", source = "onnxrt-cu12"}
+
+[[tool.poetry.source]]
+name = "onnxrt-cu12"
+url = "https://aiinfra.pkgs.visualstudio.com/PublicPackages/_packaging/onnxruntime-cuda-12/pypi/simple/"
+priority = "supplemental"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
